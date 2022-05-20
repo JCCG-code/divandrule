@@ -62,7 +62,7 @@
         </div>
 
         <!-- Investor options -->
-        <div class="user-info-investor" v-if="isInvestor && getUserAddress">
+        <div class="user-info-investor" v-if="isInvestor && getUserAddress && getKYCState == 2">
           <div class="div-title-role">
             <span class="title-role">Investor</span>
           </div>
@@ -73,7 +73,7 @@
         </div>
 
         <!-- Promoter options -->
-        <div class="user-info-promoter" v-if="isPromoter && getUserAddress">
+        <div class="user-info-promoter" v-if="isPromoter && getUserAddress && getKYCState == 2">
           <div class="div-title-role">
             <span class="title-role">Promoter</span>
           </div>

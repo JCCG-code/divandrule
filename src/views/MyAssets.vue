@@ -175,7 +175,7 @@ export default {
         // Show pending message
         this.errorMessage = ''
         this.successMessage = ''
-        this.pendingMessage = 'Sending contract. Please wait a few seconds...'
+        this.pendingMessage = 'Deploying contract. Please wait a few seconds...'
 
         deployContract(asset.name, asset.acronym, asset.totalSupply, asset.interest)
         .then(async res => {
@@ -423,17 +423,17 @@ export default {
   cursor: default;
 }
 
-.successBuyingTokens {
+.success_message {
   display: inline-block;
   color: #7100B3;
 }
 
-.pendingBuyingTokens {
+.pending_message {
   display: inline-block;
   color: #7100B3;
 }
 
-.errorBuyingTokens {
+.error_message {
   display: inline-block;
   color: rgb(255, 43, 43);
 }
