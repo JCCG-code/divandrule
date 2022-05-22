@@ -8,7 +8,7 @@ import VueAxios from 'vue-axios'
 
 
 // Axios configuration
-axios.defaults.baseURL = 'http://ec2-35-87-211-243.us-west-2.compute.amazonaws.com/api' || 'http://localhost:5001/api'
+axios.defaults.baseURL = 'http://ec2-35-87-211-243.us-west-2.compute.amazonaws.com/api' || 'http://ec2-35-87-211-243.us-west-2.compute.amazonaws.com:5001/api' || 'http://localhost:5001/api'
 
 
 // Create the frontend app by Vue.js
