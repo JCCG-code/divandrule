@@ -60,15 +60,15 @@
                 
                 <div class="item-asset">
                     <div>Whitepaper</div>
-                    <div><a :href="'http://localhost:5001/api/'+asset.whitepaper" target="_blank"><img src="../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
+                    <div><a :href="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+asset.whitepaper" target="_blank"><img src="../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
                 </div>
                 <div class="item-asset">
                     <div>Brochure</div>
-                    <div><a :href="'http://localhost:5001/api/'+asset.brochure" target="_blank"><img src="../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
+                    <div><a :href="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+asset.brochure" target="_blank"><img src="../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
                 </div>
                 <div class="item-asset">
                     <div>Legacy documents</div>
-                    <div><a :href="'http://localhost:5001/api/'+asset.legacy_docs" target="_blank"><img src="../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
+                    <div><a :href="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+asset.legacy_docs" target="_blank"><img src="../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
                 </div>
             </div>
 
@@ -117,15 +117,15 @@
                 
                 <div class="item-asset">
                     <div>Whitepaper</div>
-                    <div><a :href="'http://localhost:5001/api/'+asset.whitepaper" target="_blank"><img src="../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
+                    <div><a :href="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+asset.whitepaper" target="_blank"><img src="../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
                 </div>
                 <div class="item-asset">
                     <div>Brochure</div>
-                    <div><a :href="'http://localhost:5001/api/'+asset.brochure" target="_blank"><img src="../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
+                    <div><a :href="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+asset.brochure" target="_blank"><img src="../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
                 </div>
                 <div class="item-asset">
                     <div>Legacy documents</div>
-                    <div><a :href="'http://localhost:5001/api/'+asset.legacy_docs" target="_blank"><img src="../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
+                    <div><a :href="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+asset.legacy_docs" target="_blank"><img src="../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
                 </div>
                 </div>
 
