@@ -13,7 +13,7 @@
         <img src="../../assets/verified2-kyc.png" class="icon-verified2" alt="KYC Verified">
       </div>
       <div v-else class="form-container">
-        <form @submit="handleSubmit" enctype="multipart/form-data">
+        <form @submit.prevent="handleSubmit" enctype="multipart/form-data">
             <table style="width: 100%;">
               <tr>
                 <td>
@@ -133,7 +133,7 @@ export default {
         }
       }).then(response => {
           this.$store.dispatch('loadUser', response.data)
-          this.$forceUpdate()
+          this.$router.push('/')
         })
         .catch(err => {
           console.log('Error occurred during kyc authentication\n'+err)
