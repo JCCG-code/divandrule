@@ -133,7 +133,8 @@ export default {
         }
       }).then(response => {
           this.$store.dispatch('loadUser', response.data)
-          this.$router.push('/')
+          this.$forceUpdate()
+          alert('KYC was sent successfully')
         })
         .catch(err => {
           console.log('Error occurred during kyc authentication\n'+err)
