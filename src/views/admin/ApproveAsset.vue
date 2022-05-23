@@ -36,15 +36,15 @@
               
               <div class="item-asset">
                 <div>Whitepaper</div>
-                <div><a :href="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+asset.whitepaper" target="_blank"><img src="../../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
+                <div><a :href="this.API_URL+'/'+asset.whitepaper" target="_blank"><img src="../../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
               </div>
               <div class="item-asset">
                 <div>Brochure</div>
-                <div><a :href="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+asset.brochure" target="_blank"><img src="../../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
+                <div><a :href="this.API_URL+'/'+asset.brochure" target="_blank"><img src="../../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
               </div>
               <div class="item-asset">
                 <div>Legacy documents</div>
-                <div><a :href="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+asset.legacy_docs" target="_blank"><img src="../../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
+                <div><a :href="this.API_URL+'/'+asset.legacy_docs" target="_blank"><img src="../../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
               </div>
 
               <!-- Handler tokens -->
@@ -82,15 +82,15 @@
               
               <div class="item-asset">
                 <div>Whitepaper</div>
-                <div><a :href="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+asset.whitepaper" target="_blank"><img src="../../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
+                <div><a :href="this.API_URL+'/'+asset.whitepaper" target="_blank"><img src="../../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
               </div>
               <div class="item-asset">
                 <div>Brochure</div>
-                <div><a :href="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+asset.brochure" target="_blank"><img src="../../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
+                <div><a :href="this.API_URL+'/'+asset.brochure" target="_blank"><img src="../../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
               </div>
               <div class="item-asset">
                 <div>Legacy documents</div>
-                <div><a :href="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+asset.legacy_docs" target="_blank"><img src="../../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
+                <div><a :href="this.API_URL+'/'+asset.legacy_docs" target="_blank"><img src="../../assets/download-icon.png" class="icons" alt="Download PDF"></a></div>
               </div>
 
               <!-- Handler tokens -->
@@ -119,9 +119,12 @@ export default {
     return {
       assets: [],
       errorMessage: '',
+      API_URL: ''
     }
   },
   async created() {
+    this.API_URL = process.env.VUE_APP_API_URL
+
     await this.axios.get('/assets', {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem('token')

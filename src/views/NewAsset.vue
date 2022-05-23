@@ -58,9 +58,9 @@ export default {
   name: 'New Asset',
   data() {
     return {
-      assetName: 'El Campito ',
-      assetDescription: 'Se va a tokenizar El Campito ',
-      acronym: 'C',
+      assetName: '',
+      assetDescription: '',
+      acronym: '',
       type_of_payment: '',
       interest: 0,
       duration_months: null,

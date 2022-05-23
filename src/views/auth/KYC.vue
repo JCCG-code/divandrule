@@ -38,9 +38,9 @@
                 <th><span>Selfie</span></th>
               </tr>
               <tr>
-                <td><img :src="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+userKYC.obverseDNI" class="images"></td>
-                <td><img :src="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+userKYC.reverseDNI" class="images"></td>
-                <td><img :src="'http://ec2-54-187-107-182.us-west-2.compute.amazonaws.com:5001/api/'+userKYC.selfie" class="images"></td>
+                <td><img :src="this.API_URL+'/'+userKYC.obverseDNI" class="images"></td>
+                <td><img :src="this.API_URL+'/'+userKYC.reverseDNI" class="images"></td>
+                <td><img :src="this.API_URL+'/'+userKYC.selfie" class="images"></td>
               </tr>
             </table>
             <button class="button-verify" @click="handleVerifyKYC(userKYC)">Verify KYC</button>
@@ -61,10 +61,13 @@ export default {
   data() {
     return {
       usersKYC: [],
-      errorMessage: ''
+      errorMessage: '',
+      API_URL: ''
     }
   },
   async created() {
+    this.API_URL = process.env.VUE_APP_API_URL
+
     await this.axios.get('/superadmin/kycVerify', {
         headers: {
           Authorization: 'Bearer ' + localStorage.getItem('token')
